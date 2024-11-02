@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures </title>
+</head>
+<body>
+    <h1>Advance JavaScript</h1>
+
+
+
+    <script>
+    //    function counter(){
+    //     let count = 0;
+    //     function increment(){
+    //         count++
+    //         console.log(count)
+    //     }
+    //     function decrement(){
+    //         count--
+    //         console.log(count)
+    //     }
+    //     return{
+    //         increment:increment,
+    //         decrement: decrement
+    //     }
+    //    } 
+    //    let myCounter = counter()
+    //    console.log(myCounter)
+
+    //    myCounter.increment()
+    //    mycounter.increment()
+       
+    //    myCounter.decrement()
+
+
+
+
+
+    function outerFunction() {
+  const outerVariable = "I'm from outer function";
+
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+
+  return innerFunction;
+}
+
+const innerFunc = outerFunction();
+innerFunc();
+
+
+
+
+// Hosting
+console.log(myVar); // undefined
+var myVar = "Hello, world!";
+
+
+console.log(myVar); // undefined
+var myVar;
+myVar = "Hello, world!";
+
+
+
+sayHello(); // "Hello, world!"
+function sayHello() {
+  console.log("Hello, world!");
+}
+
+
+
+sayHello(); // TypeError: sayHello is not a function
+var sayHello = function() {
+  console.log("Hello, world!");
+}
+
+    </script>
+</body>
+</html>
